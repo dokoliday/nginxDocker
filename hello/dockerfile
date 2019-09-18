@@ -1,0 +1,11 @@
+
+FROM node:10.3.0-alpine
+
+WORKDIR /hello
+
+COPY package.json  ./
+RUN npm install
+
+COPY . ./
+
+CMD ["npm","run", "hello"]
